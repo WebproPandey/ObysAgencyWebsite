@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obys Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="overflow-hidden">
+
+    <div class="loader  fixed top-0 z-[999999] bg-black h-[100vh] w-[100vw] flex flex-col justify-center  ">
+        <div
+            class=" pl-[15vw] flex  relative justify-start items-center  h-[7.5vw] w-[100vw]  text-white text-[plain-light]">
+            <span class="per per1 text-[3vw] font-[silkserif] absolute left-[10vw] ">100</span>
+            <span class="per text-[3vw] font-[silkserif]   top-[-10%]  ">-100</span>
+            <h1 class="heading1   text-[8vw] uppercase tracking-tighter left-[4vw]"> your</h1>
+        </div>
+        <div
+            class=" pl-[10vw]  flex overflow-hidden   flex-col justify-center  h-[7.5vw] w-[100vw]  text-white text-[plain-light]">
+            <h1 class="heading2   text-[8vw] uppercase tracking-tighter">web experince</h1>
+        </div>
+        <div
+            class=" pl-[10vw] flex  overflow-hidden flex-col justify-center  h-[7.5vw] w-[100vw]  text-white text-[plain-light]">
+            <h1 class="heading3   text-[8vw] uppercase tracking-tighter relative">is loading right <span
+                    class="absolute right-[10%] now font-[500]">now</span> </h1>
+            <h1
+                class="min text-[1vw] capitalize absolute opacity-0 left-[50%] translate-x-[-50%] top-[80%] text-white text-[plain-light]">
+                please wait <br> a few second</h1>
+        </div>
+
+
+    </div>
+    <nav class="navbar h-[20vh]  w-[100vw]  fixed top-0 flex z-[13] justify-between items-center">
+        <div class="menu  h-[5vw] w-[15vw]  flex justify-evenly text-white  ">
+            <svg id="menusvg" class="menu-opener__square" width="1.2vw" height="1.2vw" viewBox="0 0 12 12" fill="none">
+                <rect y="10" width="2" height="2" fill="currentColor"></rect>
+                <rect y="5" width="2" height="2" fill="currentColor"></rect>
+                <rect width="2" height="2" fill="currentColor"></rect>
+                <rect x="5" y="10" width="2" height="2" fill="currentColor"></rect>
+                <rect x="5" y="5" width="2" height="2" fill="currentColor"></rect>
+                <rect x="5" width="2" height="2" fill="currentColor"></rect>
+                <rect x="10" y="10" width="2" height="2" fill="currentColor"></rect>
+                <rect x="10" y="5" width="2" height="2" fill="currentColor"></rect>
+                <rect x="10" width="2" height="2" fill="currentColor"></rect>
+            </svg>
+            <svg class="brand__svg" width="5vw" height="2vw" viewBox="0 0 71 27">
+                <path
+                    d="M40.7622 24.5917C40.7622 23.6724 41.4511 22.9829 42.3697 22.9829C43.2883 22.9829 43.9773 23.6724 43.9773 24.5917C43.9773 25.511 43.2883 26.2005 42.3697 26.2005C41.566 26.2005 40.7622 25.3961 40.7622 24.5917Z"
+                    fill="currentColor"></path>
+                <path
+                    d="M65.7937 8.96329C65.7937 8.04398 66.4826 7.35449 67.4012 7.35449C68.3198 7.35449 69.0087 8.04398 69.0087 8.96329C69.0087 9.88261 68.3198 10.5721 67.4012 10.5721C66.4826 10.5721 65.7937 9.88261 65.7937 8.96329Z"
+                    fill="currentColor"></path>
+                <path
+                    d="M59.019 18.3861C59.019 17.4668 59.708 16.7773 60.6266 16.7773C61.5451 16.7773 62.2341 17.4668 62.2341 18.3861C62.2341 19.3055 61.5451 19.9949 60.6266 19.9949C59.8228 19.9949 59.019 19.3055 59.019 18.3861Z"
+                    fill="currentColor"></path>
+                <path
+                    d="M41.3365 9.88276C40.5327 8.27396 39.6142 7.8143 39.04 7.58447H46.3887C45.9294 7.8143 45.0108 8.04413 45.0108 8.96344C45.0108 9.19327 45.1257 9.65293 45.3553 10.1126L48.3407 16.6627L46.5035 20.225L41.3365 9.88276Z"
+                    fill="currentColor"></path>
+                <path
+                    d="M51.8998 9.30819C51.8998 8.04413 50.9812 7.69939 50.2922 7.58447H54.6555C53.8517 7.8143 52.8183 8.27396 51.7849 10.1126C51.8998 9.88276 51.8998 9.65293 51.8998 9.30819Z"
+                    fill="currentColor"></path>
+                <path
+                    d="M66.7122 17.9266C66.7122 16.2029 65.2195 15.6283 63.0378 14.5941C60.8562 13.5599 59.019 12.7555 59.019 10.8019C59.019 8.73348 60.971 7.12468 64.1861 7.00977C63.1527 7.23959 62.3489 8.15891 62.3489 9.42296C62.3489 10.9168 63.612 11.4914 65.9084 12.5256C68.2049 13.5599 70.2717 14.4792 70.2717 16.6626C70.2717 19.1907 67.4011 20.3398 64.6454 20.4547C65.9084 20.2249 66.7122 19.1907 66.7122 17.9266Z"
+                    fill="currentColor"></path>
+                <path
+                    d="M21.0129 2.64303C21.0129 1.6088 20.3239 0.919313 19.2905 0.689485L24.4576 0V20.3398C24.4576 20.3398 22.6204 20.4547 20.8981 21.8337V2.64303H21.0129Z"
+                    fill="currentColor"></path>
+                <path
+                    d="M34.6764 14.0195C34.6764 10.4572 31.691 7.58432 27.9019 7.35449C30.1983 7.69923 30.8873 11.4914 30.8873 14.0195C30.8873 16.5476 30.1983 20.2249 27.9019 20.6845C31.8058 20.4547 34.6764 17.5819 34.6764 14.0195Z"
+                    fill="currentColor"></path>
+                <path
+                    d="M14.9269 14.0195C14.9269 10.4572 11.9415 7.58432 8.15234 7.35449C10.4488 7.69923 11.1377 11.4914 11.1377 14.0195C11.1377 16.5476 10.4488 20.2249 8.15234 20.6845C11.9415 20.4547 14.9269 17.5819 14.9269 14.0195Z"
+                    fill="currentColor"></path>
+                <path
+                    d="M0 14.0195C0 10.4572 2.9854 7.58432 6.77456 7.35449C4.4781 7.69923 3.78916 11.4914 3.78916 14.0195C3.78916 16.5476 4.4781 20.2249 6.77456 20.6845C2.9854 20.4547 0 17.5819 0 14.0195Z"
+                    fill="currentColor"></path>
+            </svg>
+        </div>
+        <div id="menu1"
+            class="menu h-[5vw] w-[35vw]  flex flex-col pl-[4vw] items-start tracking-tighter leading-[1.1vw] text-white">
+            <a href="#" class="text-[1.2vw]">Obys-</a>
+            <a href="#" class="text-[1.2vw]">Creative</a>
+            <a href="#" class="text-[1.2vw]">Design</a>
+            <a href="#" class="text-[1.2vw]">Agency</a>
+        </div>
+        <div id="menu1" class="menu1 h-[5vw] w-[30vw]   text-white text-[1.3vw] flex capitalize  justify-evenly">
+            <a href="#">work</a>
+            <a href="#">about</a>
+            <a href="#">content</a>
+        </div>
+
+    </nav>
+
+
+
+    <div class="container relative   ">
+        <div class="page1 h-[100vh]  w-[100vw]  flex justify-center items-center  ">
+
+            <div class="texts flex relative flex-col w-[60vw] h-[45vw] justify-end font-[500] ml-[14vw] ">
+                <div class="text overflow-hidden  relative tracking-tighter leading-[1]">
+                    <h1 class="element text-[8vw] text-white uppercase text-[plain-light] "> we design </h1>
+
+                </div>
+                <div class="text overflow-hidden relative   tracking-tighter leading-[1]">
+                    <h1 class="element text-[8vw] text-white uppercase text-[plain-light]  "> unique </h1>
+                </div>
+                <div id="text2" class="text relative overflow-hidden  tracking-tighter leading-[1] py-[.5vw]">
+                    <div class="flex justify-start ">
+                        <h1 id="texthover" class="element  text-[8vw] text-white uppercase text-[plain-light] "> web /
+                        </h1>
+                        <h1 id="texthover" class="element text-[8vw] text-white uppercase text-[plain-light] "> graphic
+                        </h1>
+                    </div>
+
+                    <div class="line  h-[.6vw] w-[18vw] opacity-0 bg-white absolute  z-[9999]   top-[8vw]"></div>
+                    <div class="line h-[.6vw] w-[35vw] opacity-0 bg-white absolute  z-[9999]  left-[20vw] top-[8vw]">
+                    </div>
+                </div>
+
+                <div class="imgslide z-[-1]  h-[25vw]  opacity-0 w-[20vw] top-[20vw]  absolute left-[50%]">
+
+                    <img src="https://obys.agency/wp-content/uploads/2022/03/Flag.jpg"
+                        class="h-[100%] w-[100%] object-center object-cover" alt="">
+                </div>
+
+                <div class="text overflow-hidden  tracking-tighter leading-[1]">
+                    <h1 class="element  text-[8vw] relative text-white uppercase text-[plain-light]">experince</h1>
+                    <div
+                        class="scrolls absolute top-[90%] overflow-hidden left-[-25vw] flex flex-col justify-center items-center h-[1vw] w-[5vw]">
+                        <h2 class="  scroll  scroll1 text-[#dadada] text-[1vw] tracking-tight absolute top-[-100%]">
+                            scroll</h2>
+                        <h2 class="  scroll scroll2 text-[#dadada] text-[1vw] tracking-tight absolute ">scroll</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page2 h-[50vw] w-[100vw] relative flex justify-end items-center  ">
+
+            <div class="videobox  h-[35vw] w-[70vw] relative border-[1px]">
+                <video class="video object-cover object-center h-[100%] w-[100%]" loop
+                    src="https://obys.agency/wp-content/uploads/2022/11/Obys-Showreel-2022.mp4"></video>
+                <div
+                    class="cursur z-[9] h-[12vw] w-[12vw] absolute top-[-15%] left-[80%]  flex justify-center items-center rounded-[100%] bg-[#ffa63d]">
+                    <i id="redbtn" class="ri-play-fill text-[5vw] text-white"></i>
+                </div>
+                <img id="image2" src="https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg"
+                    class="img absolute top-0 left-0 h-[100%] w-[100%] object-cover object-center">
+            </div>
+        </div>
+        <div class="page3 min-h-[50vw]  w-[100vw] flex flex-col justify-center leading-[8vw] ">
+            <div class="page3tex relative pl-[30vw] h-[25vh]  w-[100%]  flex flex-col justify-center ">
+                <h1 class="text-[7vw] text-white font-[plain-light] uppercase font-[600] tracking-tighter "> our
+                    perojects</h1>
+                <div class="underline absolute h-[.3vh] top-[100%]  w-[60%] bg-white"></div>
+            </div>
+            <div class="imagebox  mt-[20vw]  h-[100%] w-[100%]  relative flex justify-evenly ">
+                <div
+                    class="texteffect absolute top-[-15%] left-[4vw] h-[4vw]  leading-[4vw] flex flex-col   justify-start items-center overflow-hidden ">
+                    <h1 class="imagetext  text-[2.6vw] uppercase font-[plain-light] font-[600] text-white">Olga Prudka
+                    </h1>
+                    <h1 class="imagetext  text-[2.6vw] uppercase font-[plain-light] font-[600] text-white">Olga Prudka
+                    </h1>
+                </div>
+                <div class="sheryeffect box h-[30vw] w-[25vw] relative  ">
+                    <img class="object-cover object-center h-[80%] w-[100%]" src="./Olga_Prudka_2.png"
+                        alt="">
+                    <img class="object-cover object-center h-[80%] w-[100%]" src="./Olga_Prudka_1.png"
+                        alt="" srcset="">
+                </div>
+                <div
+                    class="bottom h-[10vw] w-[25vw] absolute left-[4vw] bottom-0 border-b-[1px] flex justify-between items-center">
+                    <div
+                        class="left h-[6vw] w-[8vw] flex flex-col justify-center leading-5 font-[500] capitalize text-[1vw] text-white">
+                        <h1>logo design,</h1>
+                        <h1>website desing,</h1>
+                        <h1>development</h1>
+                    </div>
+                    <div
+                        class="right h-[6vw] w-[8vw] flex justify-end items-end font-[500] capitalize text-[1vw] text-white ">
+                        <h class="text-start">2024</h1>
+                    </div>
+                </div>
+
+                <div
+                    class="texteffect absolute top-[-15%] left-[33vw]  h-[4vw]  leading-[4vw] flex flex-col   justify-start items-center overflow-hidden ">
+
+                    <h1 class="imagetext  text-[2.6vw] uppercase font-[plain-light] font-[600] text-white">OCHI</h1>
+                    <h1 class="imagetext  text-[2.6vw] uppercase font-[plain-light] font-[600] text-white">OCHI</h1>
+                </div>
+                <div class="sheryeffect box h-[40vw]  w-[30vw]  relative   ">
+                    <img class="object-cover object-center h-[80%] w-[100%]" src="./OCHI_2.png" alt="">
+                    <img class="object-cover object-center h-[80%] w-[100%]" src="./OCHI.png" alt="">
+
+                </div>
+                <div
+                    class="bottom h-[10vw] w-[30vw] absolute left-[33vw] bottom-[-10vw] border-b-[1px] flex justify-between items-center">
+                    <div
+                        class="left h-[6vw] w-[8vw] flex flex-col justify-center leading-5 font-[500] capitalize text-[1vw] text-white">
+                        <h1>website desing,</h1>
+                        <h1>development</h1>
+                    </div>
+                    <div
+                        class="right h-[6vw] w-[8vw] flex justify-end items-end font-[500] capitalize text-[1vw] text-white ">
+                        <h class="text-start">2024</h1>
+                    </div>
+                </div>
+                <div class="box  h-[40vw] w-[30vw]  flex relative justify-center items-end ">
+                    <div
+                        class="svgcircle relative   h-[20vw] w-[20vw] rounded-[50%]   border-[2px]  border-white flex justify-center items-center ">
+                        <svg class="svgloago h-[7vw] w-[7vw]  border-white text-white" class="button__arrow"
+                            viewBox="0 0 91 118" fill="none">
+                            <path
+                                d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z"
+                                fill="currentColor">
+                            </path>
+                        </svg>
+                        <div
+                            class="mesass h-[100%] w-[100%]  absolute rounded-[50%] bg-white flex justify-center items-center flex-col leading-4 ">
+                            <h1 class="text-[1vw] capitalize ">we are thrilled to you on board.</h1>
+                            <h1 class="text-[1vw] capitalize ">we hove you enjoy the project❤️.</h1>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="imageboxs  mt-[20vw]  h-[100%] w-[100%]  relative flex justify-evenly ">
+
+
+                <div class="box  h-[40vw] w-[30vw]  flex relative justify-center items-start ">
+                    <div
+                        class="svgcircle absolute top-[-10%]  h-[20vw] w-[20vw] rounded-[50%]   border-[2px]  border-white flex justify-center items-center ">
+                        <svg class="svgloago h-[7vw] w-[7vw] rotate-[-45deg]  border-white text-white"
+                            class="button__arrow" viewBox="0 0 91 118" fill="none">
+                            <path
+                                d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z"
+                                fill="currentColor"></path>
+                        </svg>
+                        <div
+                            class="mesass h-[100%] w-[100%]  absolute rounded-[50%] bg-white flex justify-center items-center flex-col leading-4 ">
+                            <h1 class="text-[1vw] capitalize ">it will be make wow!😉</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="texteffect absolute top-[5%] left-[35vw] h-[4vw]  leading-[4vw] flex flex-col   justify-start items-center  overflow-hidden ">
+                    <h1 class="text-[2.6vw] uppercase font-[plain-light] font-[600] text-white">porsche taycan</h1>
+                    <h1 class="text-[2.6vw] uppercase font-[plain-light] font-[600] text-white">porsche taycan</h1>
+                </div>
+
+                <div class="sheryeffect box h-[40vw] w-[30vw] relative top-[10vw]  ">
+                    <img class="object-cover object-center h-[80%] w-[100%]" src="./car.jpg" alt="">
+                    <img class="object-cover object-center h-[80%] w-[100%]" src="./staring.jpg" alt=""
+                        srcset="">
+                </div>
+                <div
+                    class="bottom h-[10vw] w-[30vw] absolute left-[35vw] bottom-[-20vw] border-b-[1px] flex justify-between items-center">
+                    <div
+                        class="left h-[6vw] w-[8vw] flex flex-col justify-center leading-5 font-[500] capitalize text-[1vw] text-white">
+                        <h1>website desing,</h1>
+                        <h1>fornt-end development</h1>
+                    </div>
+                    <div
+                        class="right h-[6vw] w-[8vw] flex justify-end items-end font-[500] capitalize text-[1vw] text-white ">
+                        <h class="text-start">2024</h1>
+                    </div>
+                </div>
+
+                <div
+                    class="texteffect absolute top-[-15%] left-[67vw]  h-[4vw]  leading-[4vw] flex flex-col   justify-start items-center overflow-hidden ">
+
+                    <h1 class="text-[2.6vw] uppercase font-[plain-light] font-[600] text-white">david laxer</h1>
+                    <h1 class="text-[2.6vw] uppercase font-[plain-light] font-[600] text-white">david laxer</h1>
+                </div>
+                <div class="sheryeffect box h-[40vw]  w-[30vw]  relative   ">
+                    <img class="object-cover object-center h-[80%] w-[100%]" src="./slone.png" alt="">
+                    <img class="object-cover object-center h-[80%] w-[100%]" src="./man.png" alt="">
+
+                </div>
+                <div
+                    class="bottom h-[10vw] w-[30vw] absolute left-[67vw] bottom-[-10vw] border-b-[1px] flex justify-between items-center">
+                    <div
+                        class="left h-[6vw] w-[8vw]  flex flex-col justify-center leading-5 font-[500] capitalize text-[1vw] text-white">
+                        <h1>logo design,</h1>
+                        <h1>website desing,</h1>
+                        <h1>development</h1>
+                    </div>
+                    <div
+                        class="right h-[6vw] w-[8vw]  flex justify-end items-end font-[500] capitalize text-[1vw] text-white ">
+                        <h class="text-start">2024</h1>
+                    </div>
+                </div>
+
+            </div>
+            <div class="imageboxs  mt-[30vw] h-[100%] w-[100%]  relative flex justify-evenly ">
+                <div
+                    class="texteffect absolute top-[-70%] left-[3vw] h-[4vw] z-[99]  leading-[4vw] flex flex-col   justify-start items-center overflow-hidden ">
+                    <h1 class="text-[2.6vw] capitalize font-[plain-light] font-[600] text-white">Éminente</h1>
+                    <h1 class="text-[2.6vw] capitalize font-[plain-light] font-[600] text-white">Éminente</h1>
+                </div>
+                <div class="sheryeffect box h-[30vw] w-[25vw] relative top-[-20vw]  ">
+                    <img class="object-cover object-center h-[80%] w-[100%]" src="./women.png" alt=""
+                        srcset="">
+                    <img class="object-cover object-center h-[80%] w-[100%]" src="./grass.png" alt="">
+                </div>
+                <div
+                    class="bottom h-[10vw] w-[25vw] absolute left-[3vw] top-[10vw] border-b-[1px] flex justify-between items-center">
+                    <div
+                        class="left h-[6vw] w-[8vw]  flex flex-col justify-center leading-5 font-[500] capitalize text-[1vw] text-white">
+                        <h1>logo design,</h1>
+                        <h1>website desing,</h1>
+                        <h1>development</h1>
+                    </div>
+                    <div
+                        class="right h-[6vw] w-[8vw]  flex justify-end items-end font-[500] capitalize text-[1vw] text-white ">
+                        <h class="text-start">2024</h1>
+                    </div>
+                </div>
+
+
+                <div class="box  h-[35vw] w-[30vw]  flex relative justify-center items-end  ">
+                    <div
+                        class="svgcircle   h-[20vw] w-[20vw] rounded-[50%] relative bottom-[-15vw] left-[4vw] border-[2px]  border-white flex justify-center items-center ">
+                        <svg class="svgloago h-[7vw] w-[7vw] rotate-[-90deg]  border-white text-white"
+                            class="button__arrow" viewBox="0 0 91 118" fill="none">
+                            <path
+                                d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z"
+                                fill="currentColor"></path>
+                        </svg>
+                        <div
+                            class="mesass h-[100%] w-[100%]  absolute rounded-[50%] bg-white flex justify-center items-center flex-col leading-4 ">
+                            <h1 class="text-[1vw] capitalize ">we like it's color palette 🎨</h1>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="texteffect absolute top-[-18%] right-[25vw]  h-[4vw] z-[999] leading-[4vw] flex flex-col   justify-start items-center overflow-hidden ">
+
+                    <h1 class="text-[2.6vw] uppercase font-[plain-light] font-[600] text-white">makhno</h1>
+                    <h1 class="text-[2.6vw] uppercase font-[plain-light] font-[600] text-white">makhno</h1>
+                </div>
+                <div class="sheryeffect box h-[40vw]  w-[35vw]  relative   ">
+                    <img class="object-cover object-center h-[80%] w-[100%]" src="./tree.png" alt="">
+                    <img class="object-cover object-center h-[80%] w-[100%]" src="./Makhno.png" alt="">
+
+                </div>
+
+                <div
+                    class="bottom h-[10vw] w-[35vw] absolute right-[3vw] bottom-[-10vw] border-b-[1px] flex justify-between items-center">
+                    <div
+                        class="left h-[6vw] w-[8vw]  flex flex-col justify-center leading-5 font-[500] capitalize text-[1vw] text-white">
+                        <h1>logo design,</h1>
+                        <h1>website desing,</h1>
+                        <h1>development</h1>
+                    </div>
+                    <div
+                        class="right h-[6vw] w-[8vw] flex justify-end items-end font-[500] capitalize text-[1vw] text-white ">
+                        <h class="text-start">2024</h1>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="page4 min-h-[50vw] w-[100vw] flex justify-center items-end  ">
+
+            <div
+                class=" h-[23vw] w-[23vw] bg-[#ffA63d] rounded-[50%] flex justify-center items-center transition-all ease duration-500  hover:scale-[.8] ">
+                <a class="text-[1vw] text-white capitalize" href="#">all project (14)</a>
+            </div>
+        </div>
+        <div class="page5 h-[50vw]  w-[100vw] pt-[10vw] leading-[7vw] ">
+            <div class="textsscroll h-[8vw] w-[100vw] flex items-center">
+                <div class="wraper ">
+                    <h1 class="scrolling-text text-[8vw] uppercase tracking-tighter flex-shrink-0">fashion </h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter flex-shrink-0  after:content-['â€'] after:text-[8vw]  after:px-[2vw]  after:font-[silkserif]  before:px-[2vw] before:content-['â€'] before:text-[8vw]  before:font-[silkserif] ">
+                        technology</h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter  flex-shrink-0  font-[silkserif] after:content-['â€'] after:text-[8vw]   after:px-[2vw]   after:font-[silkserif]">
+                        sport</h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter flex-shrink-0 after:content-['â€'] after:text-[8vw]  after:px-[2vw]  after:font-[silkserif]">
+                        technology</h1>
+                </div>
+                <div class="wraper ">
+                    <h1 class="scrolling-text text-[8vw] uppercase tracking-tighter flex-shrink-0">fashion </h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter flex-shrink-0  after:content-['â€'] after:text-[8vw]  after:px-[2vw]  after:font-[silkserif]  before:px-[2vw] before:content-['â€'] before:text-[8vw]  before:font-[silkserif] ">
+                        technology</h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter  flex-shrink-0  after:content-['â€'] font-[silkserif] after:text-[8vw] after:px-[2vw]   after:font-[silkserif]">
+                        sport</h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter flex-shrink-0 after:content-['â€'] after:text-[8vw]    after:font-[silkserif]">
+                        technology</h1>
+                </div>
+
+            </div>
+            <div class="textsscroll h-[8vw] w-[100vw] flex items-center ">
+                <div class="wraper2  ">
+                    <h1 class="scrolling-text text-[8vw] uppercase tracking-tighter flex-shrink-0">architecture </h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter flex-shrink-0 font-[silkserif] after:content-['â€'] after:text-[8vw]  after:px-[2vw]  after:font-[silkserif]  before:px-[2vw] before:content-['â€'] before:text-[8vw]  before:font-[silkserif] ">
+                        beauty</h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter  flex-shrink-0  after:content-['â€'] after:text-[8vw]   after:px-[2vw]   after:font-[silkserif]">
+                        real</h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter flex-shrink-0 after:content-['â€'] after:text-[8vw]  after:px-[2vw]  after:font-[silkserif]">
+                        estate</h1>
+                </div>
+                <div class="wraper2  ">
+                    <h1 class="scrolling-text text-[8vw] uppercase tracking-tighter flex-shrink-0">architecture </h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter font-[silkserif] flex-shrink-0  after:content-['â€'] after:text-[8vw]  after:px-[2vw]  after:font-[silkserif]  before:px-[2vw] before:content-['â€'] before:text-[8vw]  before:font-[silkserif] ">
+                        beauty</h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter  flex-shrink-0  after:content-['â€'] after:text-[8vw] after:px-[2vw]   after:font-[silkserif]">
+                        real</h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter flex-shrink-0 after:content-['â€'] after:text-[8vw]    after:font-[silkserif]">
+                        eatate</h1>
+                </div>
+
+            </div>
+            <div class="textsscroll h-[8vw] w-[100vw] flex items-center ">
+                <div class="wraper ">
+                    <h1 class="scrolling-text text-[8vw] uppercase tracking-tighter flex-shrink-0">travels </h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter flex-shrink-0font-[silkserif]  after:content-['â€'] after:text-[8vw]  after:px-[2vw]  after:font-[silkserif]  before:px-[2vw] before:content-['â€'] before:text-[8vw]  before:font-[silkserif] ">
+                        sciences</h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter  flex-shrink-0  after:content-['â€'] after:text-[8vw]   after:px-[2vw]   after:font-[silkserif]">
+                        rartners</h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter flex-shrink-0 font-[silkserif] after:content-['â€'] after:text-[8vw]  after:px-[2vw]  after:font-[silkserif]">
+                        travels</h1>
+                </div>
+                <div class="wraper ">
+                    <h1 class="scrolling-text text-[8vw] uppercase tracking-tighter flex-shrink-0">travels </h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter font-[silkserif] flex-shrink-0  after:content-['â€'] after:text-[8vw]  after:px-[2vw]  after:font-[silkserif]  before:px-[2vw] before:content-['â€'] before:text-[8vw]  before:font-[silkserif] ">
+                        sciences</h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter  flex-shrink-0  after:content-['â€'] after:text-[8vw] after:px-[2vw]   after:font-[silkserif]">
+                        rartners</h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter font-[silkserif] flex-shrink-0 after:content-['â€'] after:text-[8vw]    after:font-[silkserif]">
+                        travels</h1>
+                </div>
+
+            </div>
+            <div class="textsscroll h-[8vw] w-[100vw] flex items-center ">
+                <div class="wraper2  ">
+                    <h1 class="scrolling-text text-[8vw] uppercase tracking-tighter flex-shrink-0">music</h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter flex-shrink-0  after:content-['â€'] after:text-[8vw]  after:px-[2vw]  after:font-[silkserif]  before:px-[2vw] before:content-['â€'] before:text-[8vw]  before:font-[silkserif] ">
+                        hotels</h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter  flex-shrink-0  after:content-['â€'] after:text-[8vw]   after:px-[2vw]   after:font-[silkserif]">
+                        music</h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter flex-shrink-0 after:content-['â€'] after:text-[8vw]  after:px-[2vw]  after:font-[silkserif]">
+                        automaative</h1>
+                </div>
+                <div class="wraper2  ">
+                    <h1 class="scrolling-text text-[8vw] uppercase tracking-tighter flex-shrink-0">music</h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter flex-shrink-0  after:content-['â€'] after:text-[8vw]  after:px-[2vw]  after:font-[silkserif]  before:px-[2vw] before:content-['â€'] before:text-[8vw]  before:font-[silkserif] ">
+                        hotels</h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter  flex-shrink-0  after:content-['â€'] after:text-[8vw] after:px-[2vw]   after:font-[silkserif]">
+                        music</h1>
+                    <h1
+                        class="scrolling-text text-[8vw] uppercase tracking-tighter flex-shrink-0 after:content-['â€'] after:text-[8vw]    after:font-[silkserif]">
+                        automative</h1>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="page6 h-[50vw] w-[100vw] flex flex-col justify-start items-end  ">
+            <div class="textbox  flex justify-end ">
+                <div id="texteffects" class=" w-[70vw]  relative ">
+                    <div class="svgcircle6  absolute top-[2vw] right-[15vw] flex justify-center items-center ">
+                        <svg class="svgloago h-[6vw] w-[6vw] rotate-[-90deg]  border-white text-white"
+                            class="button__arrow" viewBox="0 0 91 118" fill="none">
+                            <path
+                                d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <h1 id="silk"
+                        class="let z-10  text-[7vw] font-[100] absolute top-0 text-white   font-[silkserif] uppercase  ">
+                        let's Create</h1>
+                    <h1 id="plain" class="let  ">let's Create</h1>
+                    <div class="line w-[60vw] mt-[5vw] h-[.2vw] bg-white"></div>
+
+                </div>
+            </div>
+            <div class="foltter h-[30vw] w-[70vw] flex justify-start items-center">
+                <div class="left h-[20vw] w-[15vw]  ">
+                    <h1 class="text-[1vw] text-white font-[plain-light] capitalize ">socials</h1>
+
+                    <div class="fottereffect h-[2vw] overflow-hidden   mt-[2vw] capitalize flex flex-col leading-7">
+                        <a href="#" class="text-[1.6vw] font-[plain-light] text-white">dribbble</a>
+                        <a href="#" class="text-[1.6vw] font-[plain-light] text-white">dribbble</a>
+                    </div>
+                    <div class="fottereffect h-[2vw] overflow-hidden   capitalize flex flex-col leading-7">
+                        <a href="#" class="text-[1.6vw] font-[plain-light] text-white">behance</a>
+                        <a href="#" class="text-[1.6vw] font-[plain-light] text-white">behance</a>
+                    </div>
+                    <div class="fottereffect h-[2vw] overflow-hidden   capitalize flex flex-col leading-7">
+                        <a href="#" class="text-[1.6vw] font-[plain-light] text-white">insatagram</a>
+                        <a href="#" class="text-[1.6vw] font-[plain-light] text-white">insatagram</a>
+                    </div>
+                    <div class="fottereffect h-[2vw] overflow-hidden   capitalize flex flex-col leading-7">
+                        <a href="#" class="text-[1.6vw] font-[plain-light] text-white">facebook</a>
+                        <a href="#" class="text-[1.6vw] font-[plain-light] text-white">facebook</a>
+                    </div>
+                    <div class="fottereffect h-[2vw] overflow-hidden   capitalize flex flex-col leading-7">
+                        <a href="#" class="text-[1.6vw] font-[plain-light] text-white">twitter</a>
+                        <a href="#" class="text-[1.6vw] font-[plain-light] text-white">twitter</a>
+                    </div>
+                    <div class="fottereffect h-[2vw] overflow-hidden   capitalize flex flex-col leading-7">
+                        <a href="#" class="text-[1.6vw] font-[plain-light] text-white">youtube</a>
+                        <a href="#" class="text-[1.6vw] font-[plain-light] text-white">youtube</a>
+                    </div>
+
+                </div>
+                <div class="mid h-[20vw] w-[20vw] pl-[7vw] leading-[1.5vw] ">
+                    <h1 class="text-[1vw] text-white mb-[2vw] font-[plain-light] capitalize ">address</h1>
+                    <p class="text-[1.5vw] text-white font-[plain-light] capitalize">pushkinska 5 61057 kharkiv ukraine
+                    </p>
+                </div>
+                <div class="right h-[20vw] w-[25vw] flex items-start flex-col pl-[10vw] ">
+                    <h1 class="text-[1vw] text-white mb-[2vw] font-[plain-light] capitalize ">say hii</h1>
+
+                    <div class="fottereffect h-[2vw] overflow-hidden   mt-[2vw] capitalize flex flex-col leading-7">
+                        <a class="text-[1.5vw] text-white underline" href="#">info@obys.agency</a>
+                        <a class="text-[1.5vw] text-white underline" href="#">info@obys.agency</a>
+                    </div>
+                </div>
+            </div>
+            <div class="fotterline  w-[70vw]">
+                <div class="line h-[.2vw] w-[60vw] bg-white"></div>
+                <div class="texts h-[5vw] w-fit  flex justify-start items-center">
+                    <a href="#" class="text-white">Obys Agency © 2024</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+        integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
